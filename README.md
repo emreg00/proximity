@@ -22,9 +22,9 @@ See [toolbox](http://github.com/emreg00/toolbox) package for calculating proximi
 For instance, to calculate the proximity from (A, C) to (B, D, E) in a toy network:
 
 ```python
->>> from toolbox import network_utilities, wrappers
+>>> from toolbox import wrappers
 >>> file_name = "toy.sif"
->>> network = network_utilities.create_network_from_sif_file(file_name)
+>>> network = wrappers.get_network(file_name, only_lcc = True)
 >>> nodes_from = ["A", "C"]
 >>> nodes_to = ["B", "D", "E"]
 >>> d, z, (mean, sd) = wrappers.calculate_proximity(network, nodes_from, nodes_to, min_bin_size = 2)
