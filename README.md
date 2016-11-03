@@ -13,7 +13,7 @@ Known drug-disease associations, proximity and relative efficacy values are give
 
 ## Calculating proximity
 
-See [toolbox](http://github.com/emreg00/toolbox) package for calculating proximity.
+See [toolbox](https://github.com/emreg00/toolbox) package for calculating proximity.
 
 For instance, to calculate the proximity from (A, C) to (B, D, E) in a toy network:
 
@@ -28,6 +28,17 @@ For instance, to calculate the proximity from (A, C) to (B, D, E) in a toy netwo
 (1.0, 0.97823676194805476, (0.75549999999999995, 0.24993949267772786))
 >>>
 ```
+
+## Data files
+
+The [data](https://github.com/emreg00/proximity/tree/master/data) folder contains 
+
+- disease/disease_genes.tsv: (MeSH term, gene ids) Disease-gene associations for MeSH disease terms curated in Menche et al. (2015, Science)
+- target/drug_to_geneids.pcl.all: (DrugBank id, gene ids) Drug targets for all the drugs in Drugbank 
+- indication/disease_to_drugs.pcl.source: (MeSH term, DrugBank ids) Drug indication information from "source" database (MEDI, Metab2MeSH, KEGG or NDFRT)
+- network/network.sif: (Geneid 1 Geneid) Human interactome curated in Menche et al. 
+
+Note that the analysis in the paper (whose citation below), uses a subset of the drugs and diseases given in these files, see Methods in the paper for details.
 
 # Citation
 
